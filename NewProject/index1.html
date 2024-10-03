@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Icon Page with Multiple Buttons</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .container {
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      
+      h1 {
+        font-size: 2.5rem;
+        color: #333;
+      }
+      
+      .icon img {
+        margin: 20px 0;
+      }
+      
+      /* Flexbox layout for buttons */
+      .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* This adds space between the buttons */
+        margin: 20px 0;
+      }
+      
+      button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #0056b3;
+      }
+      
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 4px;
+        text-align: left;
+      }
+      
+      .footer {
+        margin-top: 20px;
+        color: #888;
+        font-size: 0.9rem;
+      }
+      
+   </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Java</h1>
+    <div class="icon">
+      <!-- The Java icon (using a placeholder image as a reference) -->
+      <img src="java-icon.png" alt="Java Icon" width="150">
+    </div>
+
+    <!-- Button container -->
+    <div class="button-container">
+      <button id="showCodeBtn1">Show Code 1</button>
+      <button id="showCodeBtn2">Show Code 2</button>
+      <button id="showCodeBtn3">Show Code 3</button>
+    </div>
+
+    <!-- Code blocks that will toggle visibility when buttons are clicked -->
+    <pre id="code1" style="display: none;">&lt;FontAwesomeIcon icon="fa-brands fa-java" /&gt;</pre>
+    <pre id="code2" style="display: none;">&lt;FontAwesomeIcon icon="fa-brands fa-python" /&gt;</pre>
+    <pre id="code3" style="display: none;">&lt;FontAwesomeIcon icon="fa-brands fa-js" /&gt;</pre>
+
+    <div class="footer">
+      <p>Heads up! This work may be protected as a trademark.</p>
+    </div>
+  </div>
+
+  <!-- <script src="script.js"></script> -->
+   <script>
+// Get the buttons and code elements
+const showCodeBtn1 = document.getElementById('showCodeBtn1');
+const showCodeBtn2 = document.getElementById('showCodeBtn2');
+const showCodeBtn3 = document.getElementById('showCodeBtn3');
+
+const code1 = document.getElementById('code1');
+const code2 = document.getElementById('code2');
+const code3 = document.getElementById('code3');
+
+// Add event listeners for each button click
+showCodeBtn1.addEventListener('click', () => {
+  toggleCode(code1, showCodeBtn1);
+});
+
+showCodeBtn2.addEventListener('click', () => {
+  toggleCode(code2, showCodeBtn2);
+});
+
+showCodeBtn3.addEventListener('click', () => {
+  toggleCode(code3, showCodeBtn3);
+});
+
+function toggleCode(codeElement, button) {
+  if (codeElement.style.display === 'none') {
+    codeElement.style.display = 'block';
+    button.textContent = 'Hide Code';
+  } else {
+    codeElement.style.display = 'none';
+    button.textContent = 'Show Code';
+  }
+}
+
+   </script>
+</body>
+</html>
