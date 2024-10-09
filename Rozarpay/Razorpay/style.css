@@ -177,28 +177,27 @@ header {
 }
 
 
-/* Container to hold the slider */
 .logo-slider {
-    overflow: hidden; /* Hide the overflow */
-    width: 100%; /* Full width */
-    background-color: #e6fdfb; /* Optional background color */
-    padding: 10px 0; /* Padding around the logos */
+    overflow: hidden; 
+    width: 100%; 
+    background-color: #e6fdfb; 
+       padding: 10px 0; 
 }
 
-/* Inner container to slide the logos */
+
 .logo-track {
     display: flex;
-    animation: scroll 90s linear infinite; /* Animation applied to the logos */
-    width: max-content; /* Allows for an extended width based on content */
+    animation: scroll 90s linear infinite; 
+    width: max-content; 
 }
 
-/* Each logo should be of equal size */
+
 .logo-track img {
-    height: 40px; /* Adjust height as needed */
-    padding: 0 30px; /* Spacing between logos */
+    height: 40px; 
+    padding: 0 30px; 
 }
 
-/* Keyframes for the scrolling animation */
+
 @keyframes scroll {
     0% {
         transform: translateX(0);
